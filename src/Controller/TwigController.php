@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route::("/twig")
+ * @Route("/twig")
  */
 class TwigController extends AbstractController
 {
@@ -19,7 +19,7 @@ class TwigController extends AbstractController
         return $this->render(
         	'twig/index.html.twig',
 			[
-            'controller_name' => 'TwigController',
+            'demain' => new \DateTime('+1day')
 			]
 		);
     }
